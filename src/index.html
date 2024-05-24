@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Counter</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#343a40">
+    <link rel="apple-touch-icon" href="icons/icon.png">
+    <link rel="shortcut icon" href="icons/icon.png" type="image/png">
+</head>
+<body>
+    <header>Cricket Counter</header>
+    <main>
+        <div class="score"><span id="run" class="big-text">0</span><span class="big-text">/</span><span id="wicket" class="big-text">0</span> <span class="small-text">(</span><span id="over" class="small-text">0</span><span class="small-text">.</span><span id="ball" class="small-text">0</span><span class="small-text">)</span></div>
+        <div class="balls" id="ballsUI">
+            <!-- <span class="ball fourBall">4</span><span class="ball wideBall">1</span><span class="ball outBall">W</span><span class="ball noBall">1</span><span class="ball sixBall">6</span><span class="ball runBall">3</span><span class="ball dotBall"><div class="dot"></div></span> -->
+        </div>
+        <div class="info"><p>CRR : <span id="crr">3.2</span></p><p>ORR : <span id="orr">5.1</span></p></div>
+
+        <!-- <div class="target"><span id="run-required">34</span> Runs Required in <span id="ball-left">20</span> Balls</div> -->
+
+        <div class="scorepad">
+            <button class="scorepad-button" id="dotButton">Dot</button>
+            <button class="scorepad-button" id="wideButton">Wide</button>
+            <button class="scorepad-button" id="noBallButton">NoBall</button>
+            <button class="scorepad-button" id="runButton">Run</button>
+            <button class="scorepad-button" id="fourButton">Four</button>
+            <button class="scorepad-button" id="sixButton">Six</button>
+            <button class="scorepad-button" id="outButton">Out</button>
+            <button class="scorepad-button" id="undoButton">Undo</button>
+        </div>
+
+        <div class="options">
+            <button class="options-button" id="scoreboardButton">Scoreboard</button>
+            <!-- <button class="options-button" id="targetButton">Set Target</button> -->
+            <button class="options-button" id="resetButton">Reset</button>
+        </div>
+    </main>
+    <div class="overlay" id="overlay">
+        <div class="overlay-popup">
+            <div class="close-button" id="close-button"><img src="icons/close.png"></div>
+            <div id="overlay-content">
+            <!-- <div class="scoreboard">
+                <h2>Scoreboard</h2>
+                <table class="scoreboard-table">
+                    <tr>
+                        <td>01</td>
+                        <td class="overScore"><span class="ball fourBall">4</span><span class="ball wideBall">1</span><span class="ball outBall">W</span><span class="ball noBall">1</span><span class="ball sixBall">6</span><span class="ball runBall">3</span><span class="ball dotBall"><div class="dot"></div></span></td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td class="overScore"><span class="ball fourBall">4</span><span class="ball wideBall">1</span><span class="ball outBall">W</span><span class="ball noBall">1</span><span class="ball sixBall">6</span><span class="ball runBall">3</span><span class="ball dotBall"><div class="dot"></div></span></td>
+                    </tr>
+                </table>
+                <div class="scoreinfo"><h3>Total: <span>24</span></h3><h3>Extra: <span>5</span></h3><h3>Wicket: <span>1</span></h3></div>
+            </div> -->
+
+            <!-- RUN -->
+            <!-- <div class="scorepad">
+                <button class="scorepad-button">One</button>
+                <button class="scorepad-button">Two</button>
+                <button class="scorepad-button">Three</button>
+                <button class="scorepad-button">Custom</button>
+            </div> -->
+
+            <!-- OUT -->
+            <!-- <div class="scorepad">
+                <button class="scorepad-button">Bowled</button>
+                <button class="scorepad-button">Caught</button>
+                <button class="scorepad-button">LBW</button>
+                <button class="scorepad-button">Run Out</button>
+                <button class="scorepad-button">Stumped</button>
+                <button class="scorepad-button">Hit Wicket</button>
+            </div> -->
+
+            <!-- NOBALL -->
+            <!-- <div class="scorepad">
+                <button class="scorepad-button">Dot</button>
+                <button class="scorepad-button">Four</button>
+                <button class="scorepad-button">Six</button>
+                <button class="scorepad-button">Run</button>
+                <button class="scorepad-button">Out</button>
+            </div> -->
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/function.js"></script>
+<script src="js/script.js"></script>
+</html>
