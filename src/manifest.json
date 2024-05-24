@@ -1,7 +1,7 @@
 {
     "name": "Cricket Counter",
     "short_name": "Cricket Counter",
-    "start_url": "/",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#ffffff",
     "theme_color": "#343a40",
