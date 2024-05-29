@@ -673,7 +673,7 @@ document.getElementById('runButton').addEventListener('click',function(){
 document.getElementById('outButton').addEventListener('click',function(){
     // <div class="scorepad">
     // <button class="scorepad-button">Bowled</button>
-    // <button class="scorepad-button">Caught</button>
+    // <button class="scorepad-button">Catch</button>
     // <button class="scorepad-button">LBW</button>
     // <button class="scorepad-button">Run Out</button>
     // <button class="scorepad-button">Stumped</button>
@@ -689,11 +689,11 @@ document.getElementById('outButton').addEventListener('click',function(){
         addBall(true,0,1,'bowled','out')
         closeOverlay()
     })
-    let caughtButton = document.createElement("button");
-    caughtButton.classList.add('scorepad-button')
-    caughtButton.innerHTML = 'Caught'
-    caughtButton.addEventListener('click',function(){
-        addBall(true,0,1,'caught','out')
+    let catchButton = document.createElement("button");
+    catchButton.classList.add('scorepad-button')
+    catchButton.innerHTML = 'Catch'
+    catchButton.addEventListener('click',function(){
+        addBall(true,0,1,'catch','out')
         closeOverlay()
     })
     let lbwButton = document.createElement("button");
@@ -773,7 +773,7 @@ document.getElementById('outButton').addEventListener('click',function(){
 
     document.getElementById('overlay-content').innerHTML = ''
     outScorepad.appendChild(bowledButton)
-    outScorepad.appendChild(caughtButton)
+    outScorepad.appendChild(catchButton)
     outScorepad.appendChild(lbwButton)
     outScorepad.appendChild(runOutButton)
     outScorepad.appendChild(stumpedButton)
