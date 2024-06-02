@@ -242,14 +242,18 @@ function getBallUI(ball)
         let ballClass='ball wideBall'
         if (ball.countable)
             ballClass+=' countable'
-        ballUI+='<span class="'+ballClass+'">'+ball.run+'</span>'
+        if(ball.run>1)
+            ballUI+='<span class="'+ballClass+'">'+ball.run+'WD</span>'
+        else
+            ballUI+='<span class="'+ballClass+'">WD</span>'
+
     }
     else if(ball.type=='noBall')
     {   
         let ballClass='ball noBall'
         if (ball.countable)
             ballClass+=' countable'
-        if(ball.run>0)
+        if(ball.run>1)
             ballUI+='<span class="'+ballClass+'">'+ball.run+'N</span>'
         else
             ballUI+='<span class="'+ballClass+'">N</span>'
@@ -364,11 +368,11 @@ function refreshUI()
     if(lastOverBallCount==0)
         document.getElementById('crr').innerHTML = 0;
     else
-        document.getElementById('crr').innerHTML = (lastOverRunCount/lastOverBallCount).toFixed(1);
+        document.getElementById('crr').innerHTML = getRunRate('crr');
     if(totalBall==0)
         document.getElementById('orr').innerHTML = 0;
     else
-        document.getElementById('orr').innerHTML = (runCount/totalBall).toFixed(1);
+        document.getElementById('orr').innerHTML = getRunRate('orr');
     if(lastOverBallsUI!='')
         document.getElementById('ballsUI').innerHTML = lastOverBallsUI;
     else
@@ -388,7 +392,7 @@ function getRunRate(type)
                 if(balls[j].countable)
                     lastOverBallCount++
             }
-            return (lastOverRunCount/lastOverBallCount).toFixed(1)
+            return ((lastOverRunCount/lastOverBallCount)*6).toFixed(1)
         }
         else if(overs.length>0)
         {
@@ -400,7 +404,7 @@ function getRunRate(type)
                 if(overs[overs.length-1][j].countable)
                     lastOverBallCount++
             }
-            return (lastOverRunCount/lastOverBallCount).toFixed(1)
+            return ((lastOverRunCount/lastOverBallCount)*6).toFixed(1)
         }
         return -1;
     }
@@ -423,7 +427,7 @@ function getRunRate(type)
             if(balls[j].countable)
                 totalBallCount++
         }
-        return (totalRunCount/totalBallCount).toFixed(1)
+        return ((totalRunCount/totalBallCount)*6).toFixed(1)
     }
 }
 function storeScore()
