@@ -1,5 +1,7 @@
 # Cricket Counter
 
+![Cricket Counter](images/cover.png)
+
 A simple program to keep track of cricket scores.
 
 ## Table of Contents
@@ -14,6 +16,8 @@ A simple program to keep track of cricket scores.
 ## Introduction
 
 Cricket Counter is a simple website written in html,css,js that allows users to keep track of cricket scores. It provides a user-friendly interface for entering and updating scores, displaying the current scorecard, and generating reports.
+
+You can access the live project [here](https://arnabdebnath208.github.io/Cricket-Counter/src/).
 
 ## Features
 
